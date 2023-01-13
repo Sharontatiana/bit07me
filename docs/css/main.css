@@ -22,40 +22,34 @@ html {
   scroll-behavior: smooth;
 }
 
-/* SECCION INICIO */
-
-.inicio {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/docs/img/inicio.jpg");
-  background-size: cover;
-  background-position: center center;
-  height: 100vh;
-}
-
-.inicio .contenido header {
-  background-color: rgba(0, 0, 0, 0.8);
+/* Header */
+.header {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8379726890756303) 51%,
+    rgba(0, 0, 0, 0.8435749299719888) 51%
+  );
   position: fixed;
   width: 100%;
   z-index: 1;
   top: 0;
 }
 
-.inicio .contenido header .contenido-header {
+.header .contenido-header {
   max-width: 1100px;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
 }
 
-.inicio .contenido header .contenido-header nav ul {
+.header .contenido-header .nav ul {
   list-style: none;
   display: flex;
   align-items: center;
 }
 
-.inicio .contenido header .contenido-header nav ul li a {
+.header .contenido-header .nav ul li a {
   text-decoration: none;
   color: var(--colorClaro);
   margin: 0 12px;
@@ -63,20 +57,18 @@ html {
   transition: 0.6s;
 }
 
-.inicio .contenido header .contenido-header nav ul li a:hover {
+.header .contenido-header nav ul li a:hover {
   color: var(--colorCafeClaro);
 }
 
-.inicio .contenido header .contenido-header .redes a {
-  text-decoration: none;
-  color: var(--colorClaro);
-  display: inline-block;
-  margin-left: 10px;
-  transition: 0.5s;
-}
+/* Seccion Inicio */
 
-.inicio .contenido header .contenido-header .redes a:hover {
-  color: var(--colorRojo);
+.inicio {
+  background: linear-gradient(rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.7)),
+    url("/docs/img/inicio.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
 }
 
 .inicio .contenido .presentacion {
@@ -121,7 +113,6 @@ html {
   margin: 25px;
   padding: 20px 25px;
   border: 2px solid var(--colorClaro);
-  border-radius: 50px;
   color: var(--colorClaro);
   font-weight: bold;
   text-transform: uppercase;
@@ -130,6 +121,72 @@ html {
 
 .inicio .contenido .presentacion a:hover {
   background-color: var(--colorRojo);
+}
+
+/* Seccion Sobre Mi */
+
+#sobremi {
+  max-width: 1100px;
+  margin: auto;
+  padding: 100px 15px;
+  color: var(--colorRojo);
+  display: flex;
+}
+
+#sobremi .contenedor-foto {
+  max-width: 400px;
+  margin-right: 80px;
+}
+
+#sobremi .contenedor-foto img {
+  padding: 20px;
+  width: 70vh;
+  border-radius: 20px;
+  background: rgb(140, 59, 66);
+  background: radial-gradient(
+    circle,
+    rgba(140, 59, 66, 0.9528186274509804) 51%,
+    rgba(191, 99, 107, 0.8939950980392157) 51%
+  );
+}
+
+#sobremi .sobremi {
+  margin: 0 40px;
+}
+
+#sobremi .sobremi .titulo-seccion {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: var(--colorCafe);
+  text-decoration: underline;
+  text-decoration-color: var(--colorRojo);
+  text-decoration-thickness: 6px;
+}
+
+#sobremi .sobremi .subtitulo-seccion {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 20px 0;
+  letter-spacing: 2px;
+}
+
+#sobremi .sobremi .subtitulo-seccion span {
+  color: var(--colorRosado);
+}
+
+#sobremi .sobremi .subtitulo {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+#sobremi .sobremi p {
+  font-size: 14px;
+  line-height: 25px;
+  color: #565656;
+  margin-bottom: 12px;
 }
 
 @media (max-width: 500px) {
