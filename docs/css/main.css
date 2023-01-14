@@ -64,7 +64,7 @@ html {
 /* SECCION INICIO */
 
 .inicio {
-  background-image: url(/docs/img/fondo.png);
+  background-image: url("/docs/img/fondo.png");
   background-size: cover;
   background-position: center center;
   height: 100vh;
@@ -257,7 +257,7 @@ html {
 }
 #portafolio .contenedor-proyecto .proyecto .info .subtitulo-info {
   font-size: 10px;
-  margin-top: 5px ;
+  margin-top: 5px;
 }
 
 #portafolio .contenedor-proyecto .proyecto .info .parrafo1 {
