@@ -1,3 +1,3 @@
 # bit07me
-## Hoja de vida
+## Este proyecto se trata portafolio personal
 ### Dev: Sharon Monroy 
