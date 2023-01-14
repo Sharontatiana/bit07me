@@ -1,13 +1,421 @@
-img {
-  max-width: 100%;
-  height: auto;
+/*Importar fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
+
+/* Paleta de colores */
+:root {
+  --colorClaro: #f2f2f0;
+  --colorRojo: #8c3b42;
+  --colorRosado: #bf636b;
+  --colorCafe: #593239;
+  --colorCafeClaro: #a6727c;
 }
 
-.pic {
-  width: 200px;
-  border-radius: 12%;
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
 }
 
-.name {
-  color: blueviolet;
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER*/
+.header {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8379726890756303) 51%,
+    rgba(0, 0, 0, 0.8435749299719888) 51%
+  );
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}
+
+.header .contenido-header {
+  max-width: 1100px;
+  margin: auto;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header .contenido-header .nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.header .contenido-header .nav ul li a {
+  text-decoration: none;
+  color: var(--colorClaro);
+  margin: 0 12px;
+  font-weight: 400;
+  transition: 0.6s;
+}
+
+.header .contenido-header nav ul li a:hover {
+  color: var(--colorCafeClaro);
+}
+
+/* SECCION INICIO */
+
+.inicio {
+  background: linear-gradient(rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.7)),
+    url("/docs/img/inicio.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+.inicio .contenido .presentacion {
+  max-width: 1100px;
+  height: 100vh;
+  margin: auto;
+  color: var(--colorClaro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inicio .contenido .presentacion .bienvenida {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.inicio .contenido .presentacion h2 {
+  font-size: 55px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.inicio .contenido .presentacion h2 span {
+  font-size: 28px;
+  color: var(--colorCafeClaro);
+}
+
+.inicio .contenido .presentacion .descripcion {
+  max-width: 700px;
+  margin: 25px auto;
+  font-size: 18px;
+  text-align: center;
+}
+
+.inicio .contenido .presentacion a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 25px;
+  padding: 20px 25px;
+  border: 2px solid var(--colorClaro);
+  color: var(--colorClaro);
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.inicio .contenido .presentacion a:hover {
+  background-color: var(--colorRojo);
+}
+
+/* SECCION SOBRE MI */
+
+#sobremi {
+  max-width: 1100px;
+  margin: auto;
+  padding: 100px 15px;
+  color: var(--colorRojo);
+  display: flex;
+}
+
+#sobremi .contenedor-foto {
+  max-width: 400px;
+  margin-right: 80px;
+  margin-left: 10px;
+}
+
+#sobremi .contenedor-foto img {
+  padding: 20px;
+  width: 70vh;
+  border-radius: 20px;
+  background: rgb(140, 59, 66);
+  background: radial-gradient(
+    circle,
+    rgba(140, 59, 66, 0.9528186274509804) 51%,
+    rgba(191, 99, 107, 0.8939950980392157) 51%
+  );
+}
+
+#sobremi .sobremi {
+  margin: 0 40px;
+}
+
+#sobremi .sobremi .titulo-seccion {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: var(--colorCafe);
+  text-decoration: underline;
+  text-decoration-color: var(--colorRojo);
+  text-decoration-thickness: 6px;
+}
+
+#sobremi .sobremi .subtitulo-seccion {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 20px 0;
+  letter-spacing: 2px;
+}
+
+#sobremi .sobremi .subtitulo-seccion span {
+  color: var(--colorRosado);
+}
+
+#sobremi .sobremi .subtitulo {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+#sobremi .sobremi p {
+  font-size: 14px;
+  line-height: 25px;
+  text-align: justify;
+  color: var(--colorCafe);
+  margin-bottom: 12px;
+}
+/* SECCION PORTAFOLIO */
+
+#portafolio {
+  max-width: 1100px;
+  padding: 100px 0;
+  margin: auto;
+}
+
+#portafolio .titulo-seccion {
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: var(--colorCafe);
+  text-decoration: underline;
+  text-decoration-color: var(--colorRosado);
+  text-decoration-thickness: 6px;
+}
+
+#portafolio .contenedor-proyecto {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+#portafolio .contenedor-proyecto .proyecto {
+  max-width: 450px;
+  border: 1px solid #000;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+#portafolio .contenedor-proyecto .proyecto img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+#portafolio .contenedor-proyecto .proyecto:hover img {
+  filter: grayscale(0);
+}
+
+#portafolio .contenedor-proyecto .proyecto .info {
+  position: absolute;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.753);
+  color: var(--colorClaro);
+  width: 100%;
+  padding: 10px;
+  opacity: 0;
+  bottom: -40px;
+  transition: 0.5s;
+}
+
+#portafolio .contenedor-proyecto .proyecto:hover .info {
+  opacity: 1;
+  bottom: 0;
+}
+
+#portafolio .contenedor-proyecto .proyecto .info .titulo-info {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+#portafolio .contenedor-proyecto .proyecto .info .subtitulo-info {
+  color: var(--colorCafeClaro);
+  font-style: italic;
+  font-size: 15px;
+  margin: 10px 10px 10px 10px;
+  text-transform: capitalize;
+}
+#portafolio .contenedor-proyecto .proyecto .info .parrafo1 {
+  color: var(--colorClaro);
+  font-size: 15px;
+  margin: 10px 10px 10px 10px;
+  text-transform: unset;
+}
+#portafolio .contenedor-proyecto .proyecto .info .parrafo2 {
+  color: var(--colorCafeClaro);
+  font-size: 12px;
+  font-weight: 800;
+  margin-left: 90px;
+  margin-bottom: 20px;
+}
+#portafolio .contenedor-proyecto .proyecto .info .link {
+  color: var(--colorClaro);
+  text-decoration: none;
+  display: inline;
+  margin: 20px;
+  padding: 10px 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+#portafolio .contenedor-proyecto .proyecto .info a:hover {
+  color: var(--colorRojo);
+}
+
+/* SECCTION CONTACTO*/
+
+#contacto {
+  padding: 100px 15px;
+}
+#contacto .titulo-seccion {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: var(--colorCafe);
+  text-decoration: underline;
+  text-decoration-color: var(--colorRojo);
+  text-decoration-thickness: 6px;
+}
+
+#contacto .contenedor-form {
+  max-width: 1100px;
+  margin: auto;
+}
+
+#contacto .contenedor-form .fila {
+  margin-bottom: 15px;
+}
+
+#contacto .contenedor-form .mitad {
+  display: flex;
+  justify-content: space-between;
+}
+
+#contacto .contenedor-form input #contacto .contenedor-form textarea {
+  padding: 20px;
+  border-radius: 20px;
+  border: none;
+  border: 1px solid var(--colorCafeClaro);
+}
+
+#contacto .contenedor-form .mitad input {
+  width: 48%;
+}
+
+#contacto .contenedor-form .input-full {
+  width: 100%;
+}
+
+#contacto .btn-enviar {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 10px 15px;
+}
+
+#contacto .btn-enviar:hover {
+  background-color: var(--colorRojo);
+  color: #fff;
+}
+/* FOOTER*/
+footer {
+  background: #000c00;
+  color: var(--colorClaro);
+  text-align: center;
+  padding: 30px 0;
+}
+footer a {
+  text-decoration: none;
+  color: var(--colorClaro);
+  margin: 5px;
+  font-size: 26px;
+}
+
+/* SECCION RESPONSIVE*/
+
+@media (max-width: 500px) {
+  .inicio {
+    width: 100vh;
+  }
+}
+@media screen and (max-width: 800px) {
+  #sobremi {
+    padding: 30px 0;
+    display: block;
+  }
+
+  #sobremi .contenedor-foto {
+    max-width: 200px;
+    margin: auto;
+  }
+
+  #sobremi .contenedor-foto img {
+    padding: 0px;
+  }
+
+  #sobremi .sobremi {
+    margin-top: 10px;
+  }
+
+  #portfolio {
+    padding: 50px 0;
+  }
+  #portfolio .contenedor-proyecto {
+    display: block;
+  }
+  #portfolio .contenedor-proyecto .proyecto {
+    margin: 10px auto;
+  }
+
+  #contacto {
+    padding: 50px 15px;
+    width: 100vh;
+  }
+  #contacto .contenedor-form .mitad {
+    margin-bottom: 15px;
+    display: block;
+  }
+  #contacto .contenedor-form .mitad input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  footer {
+      width: 100vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sobremi {
+    position: relative;
+    left: 20%;
+  }
 }

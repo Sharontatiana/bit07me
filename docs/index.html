@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,10 +8,127 @@
     <title>Sharon Monroy</title>
   </head>
   <body>
-    <figure>
-      <img class="pic" src="./img/me.jpg" alt="Foto de la desarrolladora" />
-      <figcaption class="name">Sharon Monroy</figcaption>
-    </figure>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="contenido-header">
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="#inicio">INICIO</a>
+            </li>
+            <li>
+              <a href="#sobremi">SOBRE MI</a>
+            </li>
+            <li>
+              <a href="#portafolio">PORTFOLIO</a>
+            </li>
+            <li>
+              <a href="#contacto">CONTACTO</a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+       <!-- SECCION INICIO -->
+    <section class="inicio" id="inicio">
+      <article class="contenido">
+        <div class="presentacion">
+          <h1 class="bienvenida">Bienvenidos</h1>
+          <h2>Soy <span>Sharon Monroy</span>,  Estudiante de Desarrollo Web</h2>
+          <p class="descripcion">
+            Diseño y codifico cosas hermosas y sencillas, y me encanta lo que hago.
+          </p>
+          <a href="#portafolio">Ir a Portafolio</a>
+        </div>
+      </article>
+    </section>
+     <!-- SECCION SOBRE MI -->
+    <section id="sobremi">
+      <div class="contenedor-foto">
+        <img src="./img/me.jpg" alt="Foto de la desarrolladora" />
+      </div>
+      <article class="sobremi">
+        <h2 class="titulo-seccion">Sobre Mi</h2>
+        <h3 class="subtitulo-seccion">Hola, Soy <span>Sharon Monroy</span></h3>
+        <h3 class="subtitulo"> Estudiante de Desarrollo Web</h3>
+        <p>
+          Tecnóloga en gestión empresarial y estudiante de desarrollo web Font-End, con competencias para 
+          liderar procesos de dentro de una organización de manera dinámica y pro-activa.
+          Con gran sentido de responsabilidad, pertenencia, adaptación a los
+          cambios en cuanto a los avances tecnológicos, solución de conflictos, trabajo en
+          equipo y poder de liderazgo.         
+        </p>
+        <p>
+          Amente del mundo digital con habilidades en Html, CSS y Javascript.
+          Con ánimos de seguir creciendo en el mundo digital.
+          "La confianza en sí mismo es el primer secreto del éxito – Ralph Waldo Emerson
+        </p>
+      </article>
+    </section>
+   <!-- SECCION PORTAFOLIO -->
+    <section id="portafolio">
+      <h2 class="titulo-seccion">Mis Proyectos</h2>
+      <article class="contenedor-proyecto">
+        <div class="proyecto">
+          <img src="./img/proyecto1.png" alt="Pagina de cafe" />
+          <div class="info">
+            <h4 class="titulo-info">Blog de Cafe - Bar</h4>
+            <p class="subtitulo-info">2022, Bogotá - Colombia / Bootcamp - BIT </p>
+            <p class="parrafo1" >El proyecto se centró en el trabajo en equipo, creando un sitio web para calificar los blogs y registrarse en los eventos</p>
+           <p class="parrafo2">Sharon Monroy- Jeisson Gavilán - Vanessa Rodrigez</p> 
+           <a class="link" href="https://gregarious-flan-347da7.netlify.app/" target="_blank">Visita el Sitio Web </a>          
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- SECCTION CONTACTO -->
+    <section id="contacto">
+      <h3 class="titulo-seccion">Contacto</h3>
+      <div class="contenedor-form">
+        <form action="">
+          <div class="fila mitad">
+            <input
+              type="text"
+              placeholder="Nombre Completo *"
+              class="input-mitad"
+            />
+            <input
+              type="email"
+              placeholder="Dirección de Email"
+              class="input-mitad"
+            />
+          </div>
+          <div class="fila">
+            <input type="text" placeholder="Tema..." class="input-full" />
+          </div>
+          <div class="fila">
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Tu Mensaje..."
+              class="input-full"
+            ></textarea>
+          </div>
+          <input type="submit" value="Enviar Mensaje" class="btn-enviar" />
+        </form>
+      </div>
+    </section>
+    </main>
+    <!--FOOTER -->
+    <footer>
+      <p>Todos los derechos reservados - 2023</p>
+      <article class="redes">
+        <a href="https://github.com/Sharontatiana" target="_blank">
+          <img src="./img/icons-github.png" alt="Logo de github">
+        </a>
+        <a  href="www.linkedin.com/in/sharon-manco"  target="_blank"> 
+          <img src="./img/icons-linkedin.png" alt="Logo de linkedin">
+        </a>
+      </article>
+    </footer>
     <script src="./js/main.js"></script>
   </body>
 </html>
+
