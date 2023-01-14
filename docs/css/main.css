@@ -65,7 +65,7 @@ html {
 
 .inicio {
   background: linear-gradient(rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.7)),
-    url(/docs/img/proyecto1.png);
+    url(/docs/img/inicio.jpg);
   background-size: cover;
   background-position: center center;
   height: 100vh;
