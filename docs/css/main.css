@@ -65,7 +65,7 @@ html {
 
 .inicio {
   background: linear-gradient(rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.7)),
-    url("/docs/img/inicio.jpg");
+    url(/docs/img/inicio.jpg);
   background-size: cover;
   background-position: center center;
   height: 100vh;
@@ -256,26 +256,14 @@ html {
   text-transform: uppercase;
   letter-spacing: 5px;
 }
-#portafolio .contenedor-proyecto .proyecto .info .subtitulo-info {
-  color: var(--colorCafeClaro);
-  font-style: italic;
-  font-size: 15px;
-  margin: 10px 10px 10px 10px;
-  text-transform: capitalize;
-}
+
 #portafolio .contenedor-proyecto .proyecto .info .parrafo1 {
   color: var(--colorClaro);
   font-size: 15px;
   margin: 10px 10px 10px 10px;
   text-transform: unset;
 }
-#portafolio .contenedor-proyecto .proyecto .info .parrafo2 {
-  color: var(--colorCafeClaro);
-  font-size: 12px;
-  font-weight: 800;
-  margin-left: 90px;
-  margin-bottom: 20px;
-}
+
 #portafolio .contenedor-proyecto .proyecto .info .link {
   color: var(--colorClaro);
   text-decoration: none;
