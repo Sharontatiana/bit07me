@@ -68,6 +68,7 @@ html {
   background-size: cover;
   background-position: center center;
   height: 100vh;
+  clip-path: polygon(0 0, 100% 0, 100% 83%, 0 94%);
 }
 
 .inicio .contenido .presentacion {
@@ -189,15 +190,141 @@ html {
   color: var(--colorCafe);
   margin-bottom: 12px;
 }
+/*SECCION HABILIADES*/
+.contenedor-skills {
+  background: linear-gradient(#eb5a5acc, rgba(33, 16, 16, 0.8)),
+    url("img/fondo-skills.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  background-position: center center;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.contenedor-skills .skill {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.contenedor-skills .skill .info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenedor-skills .skill .lista {
+  display: inline-block;
+  margin-right: 20px;
+  height: 10px;
+  width: 10px;
+  background-color: #fff;
+}
+
+.contenedor-skills .skill .barra {
+  background-color: #919191;
+  width: 100%;
+  height: 6px;
+  margin: 10px 0px;
+}
+
+.contenedor-skills .skill .barra .barra-progreso1 {
+  background-color: #fff;
+  width: 95%;
+  height: 6px;
+  animation: progreso1 2s forwards;
+}
+
+.contenedor-skills .skill .barra .barra-progreso2 {
+  background-color: #fff;
+  width: 90%;
+  height: 6px;
+  animation: progreso2 2s forwards;
+}
+
+.contenedor-skills .skill .barra .barra-progreso3 {
+  background-color: #fff;
+  width: 90%;
+  height: 6px;
+  animation: progreso3 2s forwards;
+}
+
+.contenedor-skills .skill .barra .barra-progreso4 {
+  background-color: #fff;
+  width: 85%;
+  height: 6px;
+  animation: progreso4 2s forwards;
+}
+
+@keyframes progreso1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes progreso2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes progreso3 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.icons-container .icons {
+  background: var(--colorCafe);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex: 1 1 15rem;
+}
+
+.icons-container .icons img {
+  height: 4rem;
+  margin-right: 2rem;
+}
+
+.icons-container .icons h3 {
+  color:var(--colorClaro);
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.icons-container .icons span {
+  color: #555;
+  font-size: 1.3rem;
+}
+
 /* SECCION PORTAFOLIO */
 
-#portafolio {
+#portfolio {
   max-width: 1100px;
   padding: 100px 0;
   margin: auto;
 }
 
-#portafolio .titulo-seccion {
+#portfolio .titulo-seccion {
   text-align: center;
   font-size: 22px;
   text-transform: uppercase;
@@ -207,68 +334,20 @@ html {
   text-decoration-thickness: 6px;
 }
 
-#portafolio .contenedor-proyecto {
-  display: flex;
-  justify-content: space-between;
-  margin: 30px 0;
-}
-
-#portafolio .contenedor-proyecto .proyecto {
-  max-width: 450px;
-  border: 1px solid #000;
-  margin: 0 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-#portafolio .contenedor-proyecto .proyecto img {
-  width: 100%;
-  height: 100%;
-  filter: grayscale(1);
-  object-fit: cover;
-  transition: 0.5s;
-}
-
-#portafolio .contenedor-proyecto .proyecto:hover img {
-  filter: grayscale(0);
-}
-
-#portafolio .contenedor-proyecto .proyecto .info {
-  position: absolute;
-  left: 0px;
-  background-color: rgba(0, 0, 0, 0.753);
-  color: var(--colorClaro);
-  width: 100%;
-  padding: 10px;
-  opacity: 0;
-  bottom: -40px;
-  transition: 0.5s;
-}
-
-#portafolio .contenedor-proyecto .proyecto:hover .info {
-  opacity: 1;
-  bottom: 0;
-}
-
-#portafolio .contenedor-proyecto .proyecto .info .titulo-info {
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-#portafolio .contenedor-proyecto .proyecto .info .subtitulo-info {
+.info .subtitulo-info {
   font-size: 10px;
   margin-top: 5px;
 }
 
-#portafolio .contenedor-proyecto .proyecto .info .parrafo1 {
+.info .parrafo1 {
   color: var(--colorClaro);
   font-size: 15px;
   margin: 10px 10px 10px 10px;
   text-transform: unset;
 }
 
-#portafolio .contenedor-proyecto .proyecto .info .link {
-  color: var(--colorClaro);
+.info .link {
+  color: var(--colorRojo);
   text-decoration: none;
   display: inline;
   margin: 20px;
@@ -277,67 +356,52 @@ html {
   text-transform: uppercase;
   transition: 0.5s;
 }
-#portafolio .contenedor-proyecto .proyecto .info a:hover {
-  color: var(--colorRojo);
+
+#portfolio .fila {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+#portfolio .fila .proyecto {
+  max-width: 450px;
+  border: 1px solid #000;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+#portfolio .fila .proyecto img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+#portfolio .fila .proyecto:hover img {
+  filter: grayscale(0);
+}
+
+#portfolio .fila .proyecto .info {
+  position: absolute;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--colorClaro);
+  width: 100%;
+  padding: 10px;
+  opacity: 0;
+  bottom: -40px;
+  transition: 0.5s;
+}
+
+#portfolio .fila .proyecto:hover .info {
+  opacity: 1;
+  bottom: 0;
 }
 
 /* SECCTION CONTACTO*/
 
-#contacto {
-  padding: 100px 15px;
-}
-#contacto .titulo-seccion {
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 22px;
-  text-transform: uppercase;
-  color: var(--colorCafe);
-  text-decoration: underline;
-  text-decoration-color: var(--colorRojo);
-  text-decoration-thickness: 6px;
-}
-
-#contacto .contenedor-form {
-  max-width: 1100px;
-  margin: auto;
-}
-
-#contacto .contenedor-form .fila {
-  margin-bottom: 15px;
-}
-
-#contacto .contenedor-form .mitad {
-  display: flex;
-  justify-content: space-between;
-}
-
-#contacto .contenedor-form input #contacto .contenedor-form textarea {
-  padding: 20px;
-  border-radius: 20px;
-  border: none;
-  border: 1px solid var(--colorCafeClaro);
-}
-
-#contacto .contenedor-form .mitad input {
-  width: 48%;
-}
-
-#contacto .contenedor-form .input-full {
-  width: 100%;
-}
-
-#contacto .btn-enviar {
-  display: block;
-  margin: auto;
-  cursor: pointer;
-  transition: 0.5s;
-  padding: 10px 15px;
-}
-
-#contacto .btn-enviar:hover {
-  background-color: var(--colorRojo);
-  color: #fff;
-}
 /* FOOTER*/
 footer {
   background: #000c00;
@@ -366,7 +430,7 @@ footer a {
   }
 
   #sobremi .contenedor-foto {
-    max-width: 200px;
+    max-width: 400px;
     margin: auto;
   }
 
@@ -381,10 +445,10 @@ footer a {
   #portfolio {
     padding: 50px 0;
   }
-  #portfolio .contenedor-proyecto {
+  #portfolio .fila {
     display: block;
   }
-  #portfolio .contenedor-proyecto .proyecto {
+  #portfolio .fila .proyecto {
     margin: 10px auto;
   }
 
