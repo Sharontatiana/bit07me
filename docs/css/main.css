@@ -57,6 +57,10 @@ html {
   transition: 0.6s;
 }
 
+.nav ul li a .img-icon {
+  width: 30px;
+}
+
 .header .contenido-header nav ul li a:hover {
   color: var(--colorCafeClaro);
 }
@@ -191,13 +195,13 @@ html {
   margin-bottom: 12px;
 }
 /*SECCION HABILIADES*/
+
 .contenedor-skills {
-  background: linear-gradient(#eb5a5acc, rgba(33, 16, 16, 0.8)),
-    url("img/fondo-skills.jpg");
+  background: url(../img/fondo2gif.gif);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
+  color: var(--colorClaro);
   background-position: center center;
   padding: 100px 0;
   text-align: center;
@@ -218,7 +222,7 @@ html {
   margin-right: 20px;
   height: 10px;
   width: 10px;
-  background-color: #fff;
+  background-color: rgb(77, 2, 30);
 }
 
 .contenedor-skills .skill .barra {
@@ -229,28 +233,35 @@ html {
 }
 
 .contenedor-skills .skill .barra .barra-progreso1 {
-  background-color: #fff;
+  background-color: var(--colorClaro);
   width: 95%;
   height: 6px;
   animation: progreso1 2s forwards;
 }
 
 .contenedor-skills .skill .barra .barra-progreso2 {
-  background-color: #fff;
+  background-color: var(--colorClaro);
   width: 90%;
   height: 6px;
   animation: progreso2 2s forwards;
 }
 
 .contenedor-skills .skill .barra .barra-progreso3 {
-  background-color: #fff;
+  background-color: var(--colorClaro);
   width: 90%;
   height: 6px;
   animation: progreso3 2s forwards;
 }
 
 .contenedor-skills .skill .barra .barra-progreso4 {
-  background-color: #fff;
+  background-color: var(--colorClaro);
+  width: 85%;
+  height: 6px;
+  animation: progreso4 2s forwards;
+}
+
+.contenedor-skills .skill .barra .barra-progreso5 {
+  background-color: var(--colorClaro);
   width: 85%;
   height: 6px;
   animation: progreso4 2s forwards;
@@ -283,6 +294,15 @@ html {
   }
 }
 
+@keyframes progreso4 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 1%;
+  }
+}
+
 .icons-container {
   display: flex;
   flex-wrap: wrap;
@@ -292,7 +312,6 @@ html {
 }
 
 .icons-container .icons {
-  background: var(--colorCafe);
   border: 0.1rem solid rgba(0, 0, 0, 0.1);
   padding: 2rem;
   display: flex;
@@ -301,19 +320,15 @@ html {
 }
 
 .icons-container .icons img {
-  height: 4rem;
+  height: 5rem;
   margin-right: 2rem;
+  border-radius: 5px;
 }
 
 .icons-container .icons h3 {
-  color:var(--colorClaro);
+  color: var(--colorCafe);
   padding-bottom: 0.5rem;
   font-size: 1.5rem;
-}
-
-.icons-container .icons span {
-  color: #555;
-  font-size: 1.3rem;
 }
 
 /* SECCION PORTAFOLIO */
@@ -400,8 +415,6 @@ html {
   bottom: 0;
 }
 
-/* SECCTION CONTACTO*/
-
 /* FOOTER*/
 footer {
   background: #000c00;
@@ -422,6 +435,9 @@ footer a {
   .inicio {
     width: 100vh;
   }
+  .contenedor-skills {
+    width: 100vh;
+  }
 }
 @media screen and (max-width: 800px) {
   #sobremi {
@@ -440,6 +456,10 @@ footer a {
 
   #sobremi .sobremi {
     margin-top: 10px;
+  }
+
+  .contenedor-skills {
+    padding: 50px 20px;
   }
 
   #portfolio {
