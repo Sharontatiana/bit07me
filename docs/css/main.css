@@ -72,7 +72,6 @@ html {
   background-size: cover;
   background-position: center center;
   height: 100vh;
-  clip-path: polygon(0 0, 100% 0, 100% 83%, 0 94%);
 }
 
 .inicio .contenido .presentacion {
@@ -312,7 +311,7 @@ html {
 }
 
 .icons-container .icons {
-  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -357,7 +356,7 @@ html {
 .info .parrafo1 {
   color: var(--colorClaro);
   font-size: 15px;
-  margin: 10px 10px 10px 10px;
+  margin: 4px;
   text-transform: unset;
 }
 
@@ -447,7 +446,7 @@ footer a {
 
   #sobremi .contenedor-foto {
     max-width: 400px;
-    margin: auto;
+    margin: 60px 60px;
   }
 
   #sobremi .contenedor-foto img {
@@ -461,29 +460,21 @@ footer a {
   .contenedor-skills {
     padding: 50px 20px;
   }
+  .icons-container {
+    margin: 60px 60px;
+  }
 
   #portfolio {
     padding: 50px 0;
   }
   #portfolio .fila {
     display: block;
+    margin-left: 10px;
   }
   #portfolio .fila .proyecto {
     margin: 10px auto;
   }
 
-  #contacto {
-    padding: 50px 15px;
-    width: 100vh;
-  }
-  #contacto .contenedor-form .mitad {
-    margin-bottom: 15px;
-    display: block;
-  }
-  #contacto .contenedor-form .mitad input {
-    width: 100%;
-    margin-bottom: 15px;
-  }
   footer {
     width: 100vh;
   }
